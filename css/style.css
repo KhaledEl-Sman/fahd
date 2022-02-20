@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/************************************************************************************************
+Nav
+************************************************************************************************/
+
+nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 10px 3%;
+    margin: 0;
+    background-color: #1e1e1e;
+    border-radius: 0 0 7px 7px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25);
+}
+
+nav a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F90;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    font-size: 22px;
+    color: white;
+    transition: .3s;
+}
+
+nav .active {
+    color: #F90;
+    background: #FFF;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #F90;
+    background: #FFF;
+    text-decoration: none;
+}
+
+/************************************************************************************************
+Registration
+************************************************************************************************/
+
+.registration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #1e1e1e;
+}
+
+.registration form {
+    padding: 25px;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, .35);
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .35);
+}
+
+.registration form h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.registration form label {
+    font-weight: 16px;
+}
+
+@media (min-width: 450px) {
+    .registration form {
+        width: 450px;
+    }
+}
+
+@media (max-width: 450px) {
+    .registration form {
+        width: 90%;
+    }
+}
+
+/************************************************************************************************
+Home
+************************************************************************************************/
+
+.home {
+    display: flex;
+    justify-content: center;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.home .workpalce {
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.home h2 {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1b1b;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 24px;
+    margin-top: 65px;
+}
+
+.home .workpalce form {
+    width: 95%;
+    border: 1px solid rgba(0, 0, 0, .35);
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .35);
+}
+
+.home strong {
+    background-color: #1b1b1b;
+    font-size: 22px;
+    padding: 7px 0;
+    color: white;
+    font-weight: 600;
+    border-radius: 7px;
+    direction: rtl;
+}
+
+.home strong .delayed {
+    color: white;
+    font-size: 14px;
+    margin: 5px;
+    color: red;
+}
+
+.home strong .date {
+    color: white;
+    font-size: 14px;
+    margin: 5px;
+    color: #CCC;
+}
+
+.home h3 {
+    text-align: center;
+    font-size: 18px;
+    background-color: #1b1b1b;
+    margin: 10px 0;
+    padding: 5px;
+    color: #CCC;
+    border-radius: 7px;
+}
+
+.home p {
+    direction: rtl;
+    text-align: right;
+    font-size: 16px;
+    color: #EEE;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.home p span {
+    margin-right: 7px;
+    color: white;
+    font-weight: 600;
+}
+
+.home button {
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    font-weight: 600;
+}
+
+.home small {
+    color: #CCC;
+    cursor: pointer;
+}
+
+.home .less {
+    display: none;
+}
+
+.home .expand {
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home button i {
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.home .workpalce .tel {
+    color: #28a745;
+    text-decoration: unset;
+}
+
+.home .workpalce .tel:hover span {
+    text-decoration: underline;
+}
+
+.home .cancel {
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+.home .cancel form {
+    text-align: right;
+}
+
+.home .cancel form select, .home .cancel form textarea, .home .cancel form input {
+    direction: rtl;
+}
+
+.home .cancel form button {
+    margin-top: 0;
+}
+
+.menu {
+    position: fixed;
+    width: 75%;
+    height: 100vh;
+    left: calc(100% - 25px);
+    top: 0;
+    background-color: transparent;
+    transition: .5s;
+}
+
+.menu .open {
+    width: 25px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    height: 5rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    transition: .3s;
+    box-shadow: 0 .125rem .25rem rgba(255, 153, 0, 0.75);
+    cursor: pointer;
+    background-color: #F90;
+    border-radius: 7px 0 0 7px;
+}
+
+.menu .open:hover {
+    color: black;
+}
+
+.menu .open i {
+    transition: .5s;
+}
+
+.menu .data {
+    background-color: rgba(0, 0, 0, .35);
+    position: absolute;
+    left: 25px;
+    top: 0;
+    height: 100%;
+    width: calc(100% - 25px);
+    background-color: #1e1e1e;
+    padding: 20px;
+}
+
+.menu .data .profile {
+    display: flex;
+    align-items: center;
+    direction: rtl;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #CCC;
+}
+
+.menu .data .profile img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.menu .data .profile p {
+    margin: 0;
+    padding: 5px 15px;
+    text-align: right;
+    color: white;
+    font-size: 18px;
+}
+
+.menu .links {
+    text-align: right;
+}
+
+.menu .links div {
+    padding: 10px;
+    transition: .3s;
+}
+
+.menu .links div a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.menu .links div a span {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #013B63;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 7px;
+}
+
+.menu .links div:hover {
+    background-color: #F90;
+    color: white;
+}
+
+.menu .links .active {
+    background-color: #F90;
+    color: white;
+}
+
+.menu .links .call a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu .links .call a:hover {
+    color: #F90;
+    text-decoration: none;
+}
+
+.wts {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #49E670;
+    text-decoration: none;
+    font-size: 20px;
+    margin: right;
+    transition: .3s;
+}
+
+.menu .links .wts:hover {
+    color: #49E670;
+    background-color: white;
+}
+
+.home .store .month {
+    font-size: 14px;
+    background-color: #013B63;
+    text-align: center;
+    border-radius: 0 7px 0 7px;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+
+.home .store p {
+    font-size: 16px;
+    color: #EEE;
+    margin: 7px 0;
+    line-height: 1.7;
+}
+
+.home .store p span {
+    color: #DDD;
+    margin-left: 7px;
+}
+
+.home .store p .add {
+    background-color: #28a745;
+    padding: 0 5px;
+}
+
+.home .store p .minus {
+    background-color: red;
+    padding: 0 5px;
+}
+
+.home .store p u {
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.home .noti {
+    border-bottom: 3px #F90 solid;
+    padding: 1rem;
+    background-color: #1b1b1b;
+    text-align: right;
+    transition: .3s;
+    margin: 0;
+}
+
+.home .noti:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.home .noti small {
+    color: #AAA;
+}
+
+.home .noti p {
+    color: white;
+}
+
+.home .pay h3 {
+    background-color: #013B63;
+    padding: 10px 0;
+    color: #FFF;
+}
+
+@media (min-width: 450px) {
+    .home .workpalce {
+        width: 450px;
+    }
+}
+
+@media (max-width: 450px) {
+    .home .noti p {
+        font-size: 14px;
+    }
+
+    .home h2 {
+        font-size: 22px;
+    }
+
+    .home strong {
+        font-size: 20px;
+    }
+
+    .home h3 {
+        font-size: 16px;
+    }
+
+    .home p {
+        font-size: 14px;
+    }
+
+    .home button {
+        font-size: 16px;
+    }
+
+    .home button i {
+        font-size: 14px;
+    }
+
+    .home .cancel form select, .home .cancel form textarea {
+        font-size: 14px;
+    }
+
+    .home .store p {
+        font-size: 14px;
+    }
+
+    .home .store th, .home .store td {
+        font-size: 14px;
+    }
+}
+
+/************************************************************************************************
+Under
+************************************************************************************************/
