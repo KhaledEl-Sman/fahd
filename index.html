@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahd Shipping – Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="home">
+        <div class="top-nav" dir="rtl">
+            <div class="profile-nav">
+                <img class="rounded-circle" width="50" src="images/Ali.png" alt="">
+                <div class="hello">
+                    <span>اهلاً, <span style="color: tomato; font-weight: 600;">علي محمد</span></span>
+                    <h5>مرحبا بعودتك!</h5>
+                </div>
+            </div>
+            <div class="noti">
+                <i class="far fa-bell"></i>
+                <div>2</div>
+            </div>
+        </div>
+        <div class="filters my-3" dir="rtl">
+            <form action="" class="w-100" method="post">
+                <div class="form-group my-1">
+                    <select class="form-control" name="">
+                        <option disabled selected>المنطقة</option>
+                        <option>البساتين</option>
+                        <option>حدايق المعادي</option>
+                        <option>المعادي</option>
+                    </select>
+                </div>
+                <div class="form-group my-1">
+                    <label>تاريخ الطلب</label>
+                    <input type="date" id="datepicker" class="form-control" name="">
+                </div>
+                <input type="submit" class="btn btn-lg btn-dark form-control" value="إظهار النتائج">
+            </form>
+        </div>
+        <div class="orders">
+            <span class="border">كل الطـلبات</span>
+            <div class="order p-2 my-3 shadow-sm rounded border">
+                <div class="order-type">
+                    <span class="badge badge-primary">طلب جديد</span>
+                </div>
+                <table class="table" dir="rtl">
+                    <tr>
+                        <td><i class="fa fa-hashtag"></i></td>
+                        <td>2315474</td>
+                    </tr>
+                    <tr>
+                        <td><i class="far fa-user"></i></td>
+                        <td>خالد أحمد</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-map-marker-alt"></i></td>
+                        <td>17 شارع 4 وادي حوف, حلوان</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-shopping-basket"></i></td>
+                        <td><small class="px-1">2</small> x <small class="px-1">هاج سنت</small></td>
+                    </tr>
+                    <tr>
+                        <td><i class="far fa-comment"></i></td>
+                        <td>العميل يرغب في إستلام الاوردر في يوم الجمعه</td>
+                    </tr>
+                    <tr>
+                        <td><i class="far fa-calendar-alt"></i></td>
+                        <td>3/1/2022 3:00 PM</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <input type="submit" class="form-dark form-control goon" value="ابدأ التوصيل">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <nav class="shadow border-top">
+            <a href="#" class="active">
+                <i class="fa fa-list-ol"></i>
+                <span>الطلبات</span>
+            </a>
+            <a href="#">
+                <i class="fa fa-walking"></i>
+                <span>تحت التسليم</span>
+            </a>
+            <a href="#">
+                <i class="fa fa-boxes"></i>
+                <span>المخزن</span>
+            </a>
+            <a id="menu">
+                <i class="fa fa-bars"></i>
+                <span>القائمة</span>
+            </a>
+        </nav>
+
+        <!-- notifications -->
+        <div class="notifications">
+            <div class="content">
+                <i class="fa fa-long-arrow-alt-right back"></i>
+                <h6 class="shadow-sm">الإشعارات</h6>
+                <div class="notis-container">
+                    <div class="day-noti">
+                        <div class="day">اليوم</div>
+                        <div class="notis shadow-sm">
+                            <div class="noti">
+                                <div class="icon">
+                                    <i class="far fa-paper-plane"></i>
+                                </div>
+                                <p>تم تعديل مصاريف شحن منطقة <small>مايو</small> بنجاح.</p>
+                            </div>
+                            <div class="noti">
+                                <div class="icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <p>تم تحميل 5 عبوات هاج سينت من المخزن لك يرجي <a href="#">تأكيد العملية</a>.</p>
+                            </div>
+                            <div class="noti">
+                                <div class="icon">
+                                    <i class="far fa-check-circle"></i>
+                                </div>
+                                <p>لقد قمت بتسليم الطلب بنجاح.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-noti">
+                        <div class="day">امس</div>
+                        <div class="notis shadow-sm">
+                            <div class="noti">
+                                <div class="icon">
+                                    <i class="far fa-paper-plane"></i>
+                                </div>
+                                <p>تم تعديل مصاريف شحن منطقة <small>مايو</small> بنجاح.</p>
+                            </div>
+                            <div class="noti">
+                                <div class="icon">
+                                    <i class="far fa-check-circle"></i>
+                                </div>
+                                <p>لقد قمت بتسليم الطلب بنجاح.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-noti">
+                        <div class="day">الأسبوع الماضي</div>
+                        <div class="notis shadow-sm">
+                            <div class="noti">
+                                <div class="icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <p>تم تحميل 5 عبوات هاج سينت من المخزن لك يرجي <a href="#">تأكيد العملية</a>.</p>
+                            </div>
+                            <div class="noti">
+                                <div class="icon">
+                                    <i class="far fa-check-circle"></i>
+                                </div>
+                                <p>لقد قمت بتسليم الطلب بنجاح.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- notifications -->
+
+        <!-- app-menu -->
+        <div class="app-menu">
+            <div class="top-nav" dir="rtl">
+                <div class="profile-nav">
+                    <img class="rounded-circle" width="50" src="images/Ali.png" alt="">
+                    <div class="hello">
+                        <span>ali.mohamed@leadintop.com</span>
+                        <h5>Ali Mohamed</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="summary shadow-sm">
+                <p>
+                    <span>17</span>
+                    <span>الطلبات</span>
+                </p>
+                <p>
+                    <span>03</span>
+                    <span>تم التوصيل</span>
+                </p>
+            </div>
+            <div class="pages shadow-sm" dir="rtl">
+                <a href="#" class="page-item active">
+                    <i class="fa fa-list-ol"></i>
+                    <span>الطلبات</span>
+                    <i class="fa fa-caret-left"></i>
+                </a>
+                <a href="#" class="page-item">
+                    <i class="fa fa-walking"></i>
+                    <span>تحت التسليم</span>
+                    <i class="fa fa-caret-left"></i>
+                </a>
+                <a href="#" class="page-item">
+                    <i class="fa fa-list-ol"></i>
+                    <span>المخزن</span>
+                    <i class="fa fa-boxes"></i>
+                </a>
+                <a href="#" class="page-item">
+                    <i class="fa fa-wallet"></i>
+                    <span>المحفظة</span>
+                    <i class="fa fa-caret-left"></i>
+                </a>
+                <a href="#" class="page-item">
+                    <i class="fa fa-credit-card"></i>
+                    <span>طرق السداد</span>
+                    <i class="fa fa-caret-left"></i>
+                </a>
+                <a href="#" class="page-item">
+                    <i class="fa fa-sign-out-alt"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </div>
+        <!-- app-menu -->
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ar.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

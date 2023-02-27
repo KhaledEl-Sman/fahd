@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+
+
+/********************************************
+Home page
+********************************************/
+
+.home {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.top-nav .profile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.top-nav .profile-nav .hello {
+    padding: 0 7px;
+}
+
+.top-nav .profile-nav .hello span {
+    font-size: 14px;
+    color: #777;
+    font-weight: 600;
+}
+
+.top-nav .profile-nav .hello h5 {
+    font-size: 18px;
+    color: #1E1E1E;
+    padding: 3px 0;
+    margin: 0;
+}
+
+.top-nav .noti {
+    position: relative;
+    cursor: pointer;
+}
+
+.top-nav .noti div {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -.3rem;
+    top: -.35rem;
+    z-index: 2;
+    background-color: #FFF;
+    border: 1px solid #333;
+    font-size: 12px;
+}
+
+.top-nav .noti i {
+    font-size: 20px;
+    color: #333;
+}
+
+.top-nav .noti:hover i {
+    color: tomato;
+}
+
+.top-nav .noti:hover div {
+    border-color: tomato;
+    color: tomato;
+}
+
+.filters label {}
+
+.filters select, .filters option, .filters input {
+    font-size: 14px;
+}
+
+.filters input[type="submit"] {
+    background-color: #000;
+    border: none;
+}
+
+.filters input[type="submit"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.table td {
+    font-size: 15px;
+    color: #333;
+}
+
+table td small {
+    font-size: 15px;
+}
+
+table td small:first-of-type {
+    color: tomato;
+}
+
+.table td i {
+    color: #555;
+}
+
+.orders span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1E1E1E;
+    display: block;
+    text-align: center;
+    background-color: #EEE;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.order .order-type span {
+    font-size: 16px;
+    font-weight: 700;
+    color: tomato;
+}
+
+.goon {
+    background-color: tomato;
+    color: white;
+    font-family: 17px;
+    font-weight: 700;
+}
+
+/********************************
+Nav
+********************************/
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 65px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    z-index: 5;
+    border-radius: 20px 20px 0 0;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+nav a span {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+nav i {
+    font-size: 18px;
+}
+
+nav .active span, nav .active i {
+    color: tomato;
+}
+
+nav a:hover {
+    color: tomato;
+}
+
+/*******************************************
+Notifications
+*******************************************/
+
+.notifications {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: white;
+    transition: left .75s ease-in-out;
+}
+
+.notifications .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.notifications .content .back {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 22px;
+    color: #555;
+    cursor: pointer;
+}
+
+.notifications .content .back:hover {
+    color: tomato;
+}
+
+.notifications .content h6 {
+    text-align: center;
+    color: #333;
+    padding: 1rem;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.notifications .content .notis-container {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.day-noti {
+    margin: .5rem 1rem;
+}
+
+.day-noti .day {
+    text-align: right;
+    font-size: 13px;
+    color: #777;
+}
+
+.day-noti .notis {
+    padding: .5rem;
+    margin: .5rem 0 1rem 0;
+    direction: rtl;
+    border-radius: 7px;
+}
+
+.day-noti .notis .noti {
+    padding: 5px;
+    border-bottom: .5px solid rgba(0, 0, 0, .1);
+    display: flex;
+}
+
+.day-noti .notis .noti:last-child {
+    border: unset;
+}
+
+.day-noti .notis .noti .icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba(255, 99, 71, 0.2);
+    margin-left: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.day-noti .notis .noti .icon i {
+    font-size: 14px;
+    color: tomato;
+}
+
+.day-noti .notis .noti p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #333;
+    width: calc(100% - 2.5rem);
+}
+
+.day-noti .notis .noti p a {
+    font-size: 14px;
+    color: tomato;
+}
+
+/******************************************
+App-menu
+******************************************/
+
+.app-menu {
+    background-color: tomato;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    left: 100%;
+    left: 0;
+    top: 100%;
+    z-index: 4;
+    min-height: 100vh;
+}
+
+.app-menu.opened {
+    top: 0;
+}
+
+.app-menu .summary {
+    width: 85%;
+    padding: 1.5rem;
+    margin: .5rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(228, 73, 46);
+    border-radius: 7px;
+    border: 1px solid rgb(201, 30, 0);
+}
+
+.app-menu .summary p:first-of-type {
+    position: relative;
+}
+
+.app-menu .summary p:first-of-type::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1px;
+    height: 20px;
+    transform: translateY(-50%);
+    background-color: #FFF;
+}
+
+.app-menu .summary p {
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding: 5px 10px;
+    min-width: 100px;
+}
+
+.app-menu .summary p span {
+    display: block;
+    text-align: center;
+}
+
+.app-menu .profile-nav .hello span {
+    color: #EEE;
+}
+
+.app-menu .profile-nav .hello h5 {
+    color: white;
+    font-weight: 600;
+}
+
+.app-menu .pages {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    height: calc(100vh - 240px);
+    border-radius: 30px 30px 0 0;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+.app-menu .pages .page-item {
+    display: block;
+    text-decoration: none;
+    color: #1E1E1E;
+    padding: .5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    position: relative;
+    transition: .2s;
+}
+
+.app-menu .pages .page-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.app-menu .pages .page-item:last-of-type {
+    border: unset;
+}
+
+.app-menu .pages .page-item .fa-caret-left {
+    position: absolute;
+    left: .5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.app-menu .pages .page-item span {
+    padding: 0 10px;
+}
+
+.app-menu .pages .page-item.active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
