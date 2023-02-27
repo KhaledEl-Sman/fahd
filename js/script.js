@@ -1,10 +1,5 @@
 $(document).ready(function () {
 
-    $('#datepicker').datepicker({
-        language: 'ar',
-        format: 'yyyy-mm-dd'
-    });
-
     $(".top-nav .noti").click(function () {
         $(".notifications").css("left", "0");
         $("body, html").css("overflow-y", "hidden");
