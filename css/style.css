@@ -126,6 +126,25 @@ table td small:first-of-type {
     color: #555;
 }
 
+.table .wts {
+    text-decoration: none;
+    color: #fff;
+    background-color: #128c7e;
+    border-radius: 15px;
+    transition: .2s;
+    border: 1px solid white;
+}
+
+form button {
+    font-weight: 600;
+}
+
+.table .wts:hover {
+    color: #128c7e;
+    background-color: white;
+    border: 1px solid #128c7e;
+}
+
 .orders span {
     font-size: 18px;
     font-weight: 600;
@@ -141,6 +160,12 @@ table td small:first-of-type {
     font-size: 16px;
     font-weight: 700;
     color: tomato;
+}
+
+.order .order-type span small {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 3px;
 }
 
 .goon {
@@ -408,4 +433,127 @@ App-menu
 
 .app-menu .pages .page-item.active {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+/********************************************
+Under
+********************************************/
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.popup .form-group {
+    width: 75%;
+    max-width: 500px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+}
+
+
+/*************************************
+Table2
+*************************************/
+
+.table2 {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table2 td,
+.table2 th {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.table2 p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.order h3 {
+    text-align: center;
+    color: #222;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/****************************************
+Payments
+****************************************/
+
+.payments h3 {
+    background-color: tomato;
+    padding: 10px;
+    color: white;
+    border-radius: 7px;
+}
+
+.payments p {
+    background-color: rgba(0, 0, 0, .05);
+    margin-bottom: 0;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 7px 0;
+    text-align: center;
+}
+
+
+/****************************************
+Login
+*****************************************/
+
+.homeLogin {
+    position: relative;
+    background-image: url(../images/Form\ Background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.login h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login button {
+    background-color: tomato;
+    border: 1px solid tomato;
+    transition: .3s;
+}
+
+.login button:hover {
+    background-color: white;
+    color: tomato;
+    border-color: tomato;
+}
+
+.login input:focus {
+    box-shadow: none;
+    border-color: tomato;
 }

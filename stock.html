@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahd Shipping – Home</title>
+    <title>Fahd Shipping – under Submission</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -30,65 +30,8 @@
                 <div>2</div>
             </div>
         </div>
-        <div class="filters my-3" dir="rtl">
-            <form action="" class="w-100" method="post">
-                <div class="form-group my-1">
-                    <select class="form-control" name="">
-                        <option disabled selected>المنطقة</option>
-                        <option>البساتين</option>
-                        <option>حدايق المعادي</option>
-                        <option>المعادي</option>
-                    </select>
-                </div>
-                <div class="form-group my-1">
-                    <label>تاريخ الطلب</label>
-                    <input type="date" dir="rtl" lang="ar" class="form-control" name="">
-                </div>
-                <input type="submit" class="btn btn-lg btn-dark form-control" value="إظهار النتائج">
-            </form>
-        </div>
-        <div class="orders">
-            <span class="border">كل الطـلبات</span>
-            <div class="order p-2 my-3 shadow-sm rounded border">
-                <div class="order-type">
-                    <span class="badge badge-primary">طلب جديد</span>
-                </div>
-                <table class="table" dir="rtl">
-                    <tr>
-                        <td><i class="fa fa-hashtag"></i></td>
-                        <td>2315474</td>
-                    </tr>
-                    <tr>
-                        <td><i class="far fa-user"></i></td>
-                        <td>خالد أحمد</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-map-marker-alt"></i></td>
-                        <td>17 شارع 4 وادي حوف, حلوان</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-shopping-basket"></i></td>
-                        <td><small class="px-1">2</small> x <small class="px-1">هاج سنت</small></td>
-                    </tr>
-                    <tr>
-                        <td><i class="far fa-comment"></i></td>
-                        <td>العميل يرغب في إستلام الاوردر في يوم الجمعه</td>
-                    </tr>
-                    <tr>
-                        <td><i class="far fa-calendar-alt"></i></td>
-                        <td>3/1/2022 3:00 PM</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <form action="" method="post">
-                    <div class="form-group">
-                        <input type="submit" class="form-dark form-control goon" value="ابدأ التوصيل">
-                    </div>
-                </form>
-            </div>
-        </div>
         <nav class="shadow border-top">
-            <a href="index.html" class="active">
+            <a href="index.html">
                 <i class="fa fa-list-ol"></i>
                 <span>الطلبات</span>
             </a>
@@ -96,7 +39,7 @@
                 <i class="fa fa-walking"></i>
                 <span>تحت التسليم</span>
             </a>
-            <a href="stock.html">
+            <a href="stock.html" class="active">
                 <i class="fa fa-boxes"></i>
                 <span>المخزن</span>
             </a>
@@ -105,6 +48,64 @@
                 <span>القائمة</span>
             </a>
         </nav>
+
+        <div class="orders">
+            <span class="border">المخزن الشخصي</span>
+            <div class="order p-2 my-3 shadow-sm rounded border">
+                <table class="table table2 text-right" dir="rtl" border="1">
+                    <thead>
+                        <tr>
+                            <th>المنتج</th>
+                            <th>الكمية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hug Scent 100ml</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Love Vaccine 100ml</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="order p-2 my-3 shadow-sm rounded border">
+                <h3>كل التعاملات</h3>
+                <table class="table table2" dir="rtl">
+                    <thead>
+                        <tr>
+                            <th>نوع الإذن</td>
+                            <th>المنتج</td>
+                            <th>الكمية</td>
+                            <th>تأكيد العملية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>صرف</td>
+                            <td>هاج سنت</td>
+                            <td>50</td>
+                            <td>
+                                <form action="" method="post">
+                                    <button type="submit" class="btn btn-danger" style="font-size: 13px;">تأكيد
+                                        العملية</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>مرتجع</td>
+                            <td>لاف فاكسين</td>
+                            <td>5</td>
+                            <td>
+                                <p class="text-white mb-0 bg-success rounded">عملية مؤكدة</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
         <!-- notifications -->
         <div class="notifications">
@@ -196,7 +197,7 @@
                 </p>
             </div>
             <div class="pages shadow-sm" dir="rtl">
-                <a href="index.html" class="page-item active">
+                <a href="index.html" class="page-item">
                     <i class="fa fa-list-ol"></i>
                     <span>الطلبات</span>
                     <i class="fa fa-caret-left"></i>
@@ -206,10 +207,10 @@
                     <span>تحت التسليم</span>
                     <i class="fa fa-caret-left"></i>
                 </a>
-                <a href="stock.html" class="page-item">
-                    <i class="fa fa-list-ol"></i>
-                    <span>المخزن</span>
+                <a href="stock.html" class="page-item active">
                     <i class="fa fa-boxes"></i>
+                    <span>المخزن</span>
+                    <i class="fa fa-caret-left"></i>
                 </a>
                 <a href="money.html" class="page-item">
                     <i class="fa fa-wallet"></i>
